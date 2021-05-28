@@ -4,8 +4,13 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 trigger:
-    - main
-    - development
+  branches:
+    include:
+      - main
+      - development
+  paths:
+    include:
+      - nistagram_agent/*
 
 pool:
   name: Nistagram-pool
