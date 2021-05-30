@@ -104,7 +104,7 @@ resource "heroku_app" "example" {
 # Build code & release to the app
 resource "heroku_build" "example" {
   app        = heroku_app.example.name
-
+  buildpacks = [heroku/python]
   source {
     path = "./"
   }
