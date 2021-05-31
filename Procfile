@@ -1,0 +1,1 @@
+web: gunicorn nistagram_agent.wsgi
